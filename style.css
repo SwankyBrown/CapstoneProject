@@ -1,0 +1,7 @@
+* {outline: red dashed 1px;
+}
+
+input {
+    outline: none;
+    width: 130px;
+}

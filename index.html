@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+    
+</head>
+<body>
+    <header>
+        <H1>Hall Of Fame</H1>
+        <h3>Volume:<input type="range" id="volume-slider" min="0" max="100" value="30" step="1"></h3>
+    </header>
+    <h2>Add A Song To The Hall Of Fame</h2>
+    <section class="song-input">
+        <h3>Add Song:</h3>
+        <input id="song-name" placeholder="Song Name">
+        <input id="artist" placeholder="Artist">
+        <select id="genre">
+            <option value="Genre">Select Genre</option>
+            <option>Rock</option>
+            <option>Hip Hop/R&B</option>
+            <option>Dubstep</option>
+            <option>EDM</option>
+            <option>House</option>
+            <option>indie</option>
+            <option>Rap</option>
+            <option>Jazz</option>
+            <option>Country</option>
+            <option>Phonk</option>
+            <option>pop</option>
+            <option>latin</option>
+        </select>
+        <select id="rank">
+            <option value="Rank">Rank</option>
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+            <option>6</option>
+            <option>7</option>
+            <option>8</option>
+            <option>9</option>
+            <option>10</option>
+        </select>
+        <button type="submit" id="add-song">Add Song</button>
+    </section>
+
+    <script src="main.js"></script>
+</body>
+</html>
