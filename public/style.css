@@ -1,0 +1,309 @@
+/* * {outline: red dashed 1px;
+} */
+
+body {
+	background: linear-gradient(-45deg, #000000, #7d0231, #020017, #360030);
+	background-size: 400% 400%;
+	animation: gradient 30s ease infinite;
+	height: 100vh;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+header {
+    font-size: 50px;
+    margin: auto;
+    margin-bottom: -50px;
+    text-align: center;
+    width: 100%;
+    color: aliceblue;
+    color: hsl(0, 0%, 100%);
+    text-shadow: 0 0 10px rgb(222, 242, 252), 0 0 20px rgb(198, 227, 248), 0 0 40px white;
+}
+
+h2 {
+    font-size: 50px;
+    margin: auto;
+    text-align: center;
+    width: 100%;
+    color: aliceblue;
+}
+#song-name {
+    font-size: 18px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    display: inline-block;
+    text-align: center;
+    font-weight: bold;
+    padding: 0.7em 2em;
+    border: 3px solid #FF0072;
+    border-radius: 20px;
+    position: relative;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.1);
+    color: #FF0072;
+    text-decoration: none;
+    transition: 0.3s ease all;
+    z-index: 1;
+    cursor: pointer;
+}
+
+#artist { 
+    font-size: 18px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    display: inline-block;
+    text-align: center;
+    font-weight: bold;
+    padding: 0.7em 2em;
+    border: 3px solid #FF0072;
+    border-radius: 20px;
+    position: relative;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.1);
+    color: #FF0072;
+    text-decoration: none;
+    transition: 0.3s ease all;
+    z-index: 1;
+    cursor: pointer;
+}
+
+#genre {
+    font-size: 18px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    display: inline-block;
+    text-align: center;
+    font-weight: bold;
+    padding: 0.7em 2em;
+    border: 3px solid #FF0072;
+    border-radius: 20px;
+    position: relative;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.1);
+    color: #FF0072;
+    text-decoration: none;
+    transition: 0.3s ease all;
+    z-index: 1;
+    cursor: pointer;
+}
+
+#rank {
+    font-size: 18px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    display: inline-block;
+    text-align: center;
+    font-weight: bold;
+    padding: 0.7em 2em;
+    border: 3px solid #FF0072;
+    border-radius: 20px;
+    position: relative;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.1);
+    color: #FF0072;
+    text-decoration: none;
+    transition: 0.3s ease all;
+    z-index: 1;
+    cursor: pointer;
+}
+
+.song-input {
+    font-size: 50px;
+    margin: auto;
+    text-align: center;
+    width: 100%;
+    color: rgb(255, 255, 255);
+}
+
+button {
+    font-size: 18px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    display: inline-block;
+    text-align: center;
+    font-weight: bold;
+    padding: 0.7em 2em;
+    border: 3px solid #FF0072;
+    border-radius: 20px;
+    position: relative;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.1);
+    color: #FF0072;
+    text-decoration: none;
+    transition: 0.3s ease all;
+    z-index: 1;
+    cursor: pointer;
+  }
+  
+  button:before {
+    transition: 0.5s all ease;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    right: 50%;
+    bottom: 0;
+    opacity: 0;
+    content: '';
+    border-radius: 17px;
+    background-color: #FF0072;
+    z-index: -1;
+  }
+  
+  button:hover, button:focus {
+    color: white;
+  }
+  
+  button:hover:before, button:focus:before {
+    transition: 0.5s all ease;
+    left: 0;
+    right: 0;
+    opacity: 1;
+  }
+  
+  button:active {
+    transform: scale(0.9);
+  }
+
+  #song-display {
+    font-size: 23px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    display: inline-block;
+    text-align: center;
+    font-weight: bold;
+    align-items: center;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    color: #FF0072
+  }
+  
+  .song {
+    width: 500px;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ffffff;
+    border-radius: 17px;
+  }
+  .song:before {
+    transition: 0.5s all ease;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    right: 50%;
+    bottom: 0;
+    opacity: 0;
+    content: '';
+    border-radius: 17px;
+    background-color: #FF0072;
+    z-index: -1;
+  }
+  .song:hover{
+    text-shadow: 0 0 1px rgb(222, 242, 252), 0 0 20px rgb(198, 227, 248), 0 0 40px white;
+    border-width: 3px;
+
+    border-radius: 17px;
+  }
+  
+  .song h3, .song p {
+    margin: 20px;
+    padding: 0px;
+  }
+  
+  .song audio {
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+  }
+
+  #delete-btn {
+    color: rgb(0, 0, 0);
+    align-items: left;
+    margin-left: 150px;
+    margin-bottom: 30px;
+  }
+
+
+
+  /* .custom-file-input {
+    /* font-size: 18px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    display: inline-block;
+    text-align: center;
+    font-weight: bold;
+    padding: 0.7em 2em;
+    border: 3px solid #FF0072;
+    border-radius: 20px;
+    position: relative;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.1);
+    color: #FF0072;
+    text-decoration: none;
+    transition: 0.3s ease all;
+    z-index: 1;
+    cursor: pointer; */
+  /* } */ */
+  
+  .custom-file-input:hover {
+    background-color: #ff1a58;
+    
+  }
+  
+ 
+  input[type="file"]::file-selector-button {
+    font-size: 18px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    display: inline-block;
+    text-align: center;
+    font-weight: bold;
+    padding: 0.7em 2em;
+    border: 3px solid #FF0072;
+    border-radius: 20px;
+    position: relative;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.1);
+    color: #FF0072;
+    text-decoration: none;
+    transition: 0.3s ease all;
+    z-index: 1;
+    margin-left: 87px;
+    cursor: pointer;
+  }
+
+  input[type="file"]::file-selector-button:before {
+    transition: 0.5s all ease;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    right: 50%;
+    bottom: 0;
+    opacity: 0;
+    content: '';
+    border-radius: 17px;
+    background-color: #FF0072;
+    z-index: -1;
+  }
+  
+
+  input[type="file"]::file-selector-button:hover, input[type="file"]::file-selector-button:focus {
+    color: rgb(0, 0, 0);
+  }
+  
+  input[type="file"]::file-selector-button:hover:before, input[type="file"]::file-selector-button:focus:before {
+    transition: 0.5s all ease;
+    left: 0;
+    right: 0;
+    opacity: 1;
+  }
+  
+  input[type="file"]::file-selector-button:active {
+    transform: scale(0.9);
+  }
+
+
+  
