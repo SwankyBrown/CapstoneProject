@@ -1,11 +1,20 @@
 /* * {outline: red dashed 1px;
 } */
 
+
 body {
-	background: linear-gradient(-45deg, #000000, #7d0231, #020017, #360030);
+  background: linear-gradient(-45deg, #000000, #7d0231, #020017, #360030);
 	background-size: 400% 400%;
 	animation: gradient 30s ease infinite;
 	height: 100vh;
+}
+a {
+position: fixed;
+margin-top: 100px;
+top: 400px;
+  left: 1px; 
+  width: 100%;
+  z-index: -1;
 }
 
 @keyframes gradient {
@@ -172,6 +181,8 @@ button {
   #song-display {
     font-size: 23px;
     letter-spacing: 2px;
+    margin: auto;
+    margin-top: 20px;
     text-transform: uppercase;
     display: inline-block;
     text-align: center;
@@ -180,18 +191,22 @@ button {
     text-align: left;
     display: flex;
     flex-direction: column;
-    color: #FF0072
+    color: #FF0072;
+    animation: fadeIn .3s;
   }
   
   .song {
+    transition: ease-in-out 0.3s;
     width: 500px;
     margin-bottom: 10px;
     padding: 10px;
     border: 1px solid #ffffff;
     border-radius: 17px;
+    animation: fadeIn .3s;
+
   }
   .song:before {
-    transition: 0.5s all ease;
+    transition: 0.3s all ease;
     position: absolute;
     top: 0;
     left: 50%;
@@ -203,17 +218,21 @@ button {
     background-color: #FF0072;
     z-index: -1;
   }
-  .song:hover{
+  .song:hover {
     text-shadow: 0 0 1px rgb(222, 242, 252), 0 0 20px rgb(198, 227, 248), 0 0 40px white;
-    border-width: 3px;
-
-    border-radius: 17px;
+    
   }
   
   .song h3, .song p {
     margin: 20px;
     padding: 0px;
+    animation: fadeIn 4s;
   }
+
+  .song p {
+    color: white;
+  }
+  
   
   .song audio {
     width: 100%;
@@ -224,35 +243,13 @@ button {
   #delete-btn {
     color: rgb(0, 0, 0);
     align-items: left;
-    margin-left: 150px;
+    margin-left: 135px;
+    margin-top: 15px;
     margin-bottom: 30px;
   }
 
-
-
-  /* .custom-file-input {
-    /* font-size: 18px;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    display: inline-block;
-    text-align: center;
-    font-weight: bold;
-    padding: 0.7em 2em;
-    border: 3px solid #FF0072;
-    border-radius: 20px;
-    position: relative;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.1);
-    color: #FF0072;
-    text-decoration: none;
-    transition: 0.3s ease all;
-    z-index: 1;
-    cursor: pointer; */
-  /* } */ */
   
-  .custom-file-input:hover {
-    background-color: #ff1a58;
-    
-  }
+  
   
  
   input[type="file"]::file-selector-button {
@@ -306,4 +303,17 @@ button {
   }
 
 
-  
+
+  @keyframes slideInFromLeft {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }

@@ -3,7 +3,7 @@ const songNameInput = document.getElementById("song-name");
 const artistInput = document.getElementById("artist");
 const genreInput = document.getElementById("genre");
 const rankInput = document.getElementById("rank");
-const songFileInput = document.getElementById("song-file");
+// const songFileInput = document.getElementById("song-file");
 const addSongButton = document.getElementById("add-song");
 const songDisplaySection = document.getElementById("song-display");
 const deleteBtn = document.getElementById("delete-btn")
@@ -29,7 +29,7 @@ form.addEventListener("submit", function (event) {
   const artist = artistInput.value;
   const genre = genreInput.value;
   const rank = rankInput.value;
-  const songFile = songFileInput.files[0];
+  // const songFile = songFileInput.files[0];
   
   // Check if any field is empty or set to default values
   if (
@@ -50,7 +50,7 @@ form.addEventListener("submit", function (event) {
       artist,
       genre,
       rank,
-      songFile
+      // songFile
     };
     
   // Add the new song to the songs array
@@ -61,7 +61,7 @@ form.addEventListener("submit", function (event) {
   artistInput.value = "";
   genreInput.value = "Genre";
   rankInput.value = "Rank";
-  songFileInput.value = "";
+  // songFileInput.value = "";
 });
 
 function createSongElement(song) {
@@ -74,12 +74,13 @@ function createSongElement(song) {
   <p>Rank: ${song.rank}</p>
   <button id="delete-btn" onclick="deleteSong(${song.id})">Delete Song</button>
   `;
-  // <audio controls>
-  // <source src="${URL.createObjectURL(song.songFile)}" type="audio/mpeg">
-  // </audio>
+//   <audio controls>
+//   <source src="${song.mp3}" type="audio/mpeg">
+// </audio>
   
   songDisplaySection.appendChild(songElement);
 }
+
 
 
 

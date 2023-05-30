@@ -10,7 +10,7 @@ createSong: (req,res) => {
  let {songName, artist, rank, genre, songFile} = req.body
  const existingSong = songs.find(song => song.rank === +rank);
  if (!songName || !artist || !rank || !genre) {
-    res.status(404).send("Please fill in all the fields and select an MP3 file.")
+    res.status(404).send("Please fill in all the fields.")
  } else if (existingSong){
     res.status(404).send("A song with the same rank already exists. Please choose a different rank.");
     
@@ -23,7 +23,7 @@ createSong: (req,res) => {
         songName,
         artist,
         genre,
-        songFile
+      //   songFile
     }
     songs.push(song)
     songs.sort((a, b) => a.rank - b.rank)
